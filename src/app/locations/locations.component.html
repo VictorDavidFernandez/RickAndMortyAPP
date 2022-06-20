@@ -1,0 +1,36 @@
+<div class="searchName">
+    <input class="searchNameInput" type="text" [(ngModel)] = "searchedName" (input) = "searchName()" placeholder="Search location">
+</div>
+
+<div class="buttons">
+    <button (click)="prevPage()">Prev page</button>
+    <button (click)="nextPage()">Next page</button>
+</div>
+<br/>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Type</td>
+            <td>Dimension</td>
+            <td>Created</td>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let location of locations">
+            <tr>
+                <td>{{location.name}}</td>
+                <td>{{location.type}}</td>
+                <td>{{location.dimension}}</td>
+                <td>{{location.created | date:'dd/MM/y'}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
+
+<div class="buttons">
+    <button (click)="prevPage()">Prev page</button>
+    <button (click)="nextPage()">Next page</button>
+</div>
+<br/>

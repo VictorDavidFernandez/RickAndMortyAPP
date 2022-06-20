@@ -1,0 +1,11 @@
+<div class="card"*ngIf="character">
+    <img class="card-img-top" src="{{character.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><b>{{character.name}}</b></h5>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Status:</b> {{character.status}}</li>
+        <li class="list-group-item"><b>Species:</b> {{character.species}}</li>
+        <li class="list-group-item"><b>Gender:</b> {{character.gender}}</li>
+      </ul>
+    </div>
+  </div>

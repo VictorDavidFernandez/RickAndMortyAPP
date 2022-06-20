@@ -1,0 +1,29 @@
+<div class="searchName">
+    <input class="searchNameInput" type="text" [(ngModel)] = "searchedName" (input) = "searchName()" placeholder="Search character">
+</div>
+
+<div class="buttons">
+    <button (click)="prevPage()">Prev page</button>
+    <button (click)="nextPage()">Next page</button>
+</div>
+<br/>
+
+<div class="row row row-cols-1 row-cols-md-6 g-8">
+    <div *ngFor="let character of characters">
+        <div class="card-group">
+            <div class="card border-warning card-wr-bg">
+              <a [routerLink]="['/Characters', character.id]"><img class="card-img-top" src="{{character.image}}"></a>
+              <div class="card-body">
+                <h5 class="card-title"><a [routerLink]="['/Characters', character.id]">{{character.name}}</a></h5>
+              </div>
+            </div>      
+        </div>
+        <br/>
+    </div>
+</div>
+
+<div class="buttons">
+    <button (click)="prevPage()">Prev page</button>
+    <button (click)="nextPage()">Next page</button>
+</div>
+<br/>

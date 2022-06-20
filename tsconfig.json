@@ -20,7 +20,10 @@
     "module": "es2020",
     "lib": [
       "es2020",
-      "dom"
+      "dom",
+      "ES7",
+      "ES2016.Array.Include",
+      "ES2017"
     ]
   },
   "angularCompilerOptions": {
